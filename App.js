@@ -1,19 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
+import { MapScreen } from './screens/index';
+
+const TapNavigator = createBottomTabNavigator({
+  Map: MapScreen,
+}, {
+  initialRouteName: 'Map',
+  header: null,
+  headerMode: 'none'
+});
+
+const AppContainer = createAppContainer(TapNavigator);
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello!</Text>
-    </View>
+    <AppContainer/>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
