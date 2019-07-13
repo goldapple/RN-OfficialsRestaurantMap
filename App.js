@@ -1,9 +1,11 @@
 import React from 'react';
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
-import { MapScreen } from './screens/index';
+import { MapScreen, ListScreen, BoardScreen } from './screens/index';
 
 const TapNavigator = createBottomTabNavigator({
   Map: MapScreen,
+  List: ListScreen,
+  Board: BoardScreen
 }, {
   initialRouteName: 'Map',
   header: null,
